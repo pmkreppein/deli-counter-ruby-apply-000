@@ -53,6 +53,7 @@ puts "Welcome to Katz Deli!  To use our new line system, just type your name and
     when "serve"
       now_serving(katz_deli)
     when "exit"
+      puts "Thanks for stopping by.  Goodbye!"
       break
     when "line"
       line(katz_deli)
