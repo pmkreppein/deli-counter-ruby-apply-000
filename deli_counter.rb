@@ -15,13 +15,13 @@ end
 def take_a_number(line_array, name)
   line_array.push(name.capitalize)
   puts "Welcome, #{name.capitalize}.  You are number #{line_array.count} in line."
-  return katz_deli = line_array
+  katz_deli = line_array
 end
 
 def now_serving(line_array)
   if line_array.any?
     puts "Currently serving #{line_array[0].capitalize}"
-    line_array.shift
+    line_array.pop
   else puts "There is nobody waiting to be served!"
   end
 end
