@@ -1,22 +1,51 @@
-# Write your code here.
 katz_deli = []
-def line(array)
-  count = array.count
 
-  case count
-  when count <= 0
+def line(line_array)
+  working_array = []
+  if line_array.count <= 0
     puts "The line is currently empty."
-  when count > 0
-    puts "The line currently has #{count} people waiting."
   else
-    puts "An error has occurred, please contact support. Message: Invalid arguement count passed."
+    line_array.each_with_index {|name, idx|
+      working_array.push("#{(idx += 1).to_s}. #{name}")
+    }
+    puts "The line is currently: #{working_array.join(" ")}"
+  end
 end
 
-def take_a_number(array, name)
-  array.push(name)
-  puts "#{name}, #{array.count()}"
+def take_a_number(line_array, name)
+  line_array.push(name.capitalize)
+  puts "Welcome, #{name.capitalize}.  You are number #{line_array.count} in line."
 end
 
-def now_serving(array)
-  array
+def now_serving(line_array)
+  if line_array.any? 
+    puts "Currently serving #{line_array[0].capitalize}"
+    line_array.shift
+  else puts "There is nobody waiting to be served!"
+  end
 end
+=begin
+puts "Welcome to Katz Deli!  To use our new line system, just type your name and we will add you to the line."
+
+ while TRUE
+  print "Enter name: "
+  input = gets.chomp.to_s.downcase
+  case input
+    when "help"
+      puts "\nSystem Help: \n
+      The following commands can be used with this system: \n
+        Serve: Call the next person in line. \n
+        Line: List the current line. \n
+        Exit: Exit the program. \n
+        Other than these commands, any text will be treated as a customer name and added to the line."
+    when "serve"
+      now_serving(katz_deli)
+    when "exit" 
+      break
+    when "line"
+      line(katz_deli)
+    else take_a_number(katz_deli, input)
+ end   
+end
+
+=end
