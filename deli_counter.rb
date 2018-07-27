@@ -7,6 +7,7 @@ def line(line_array)
   else
     line_array.each_with_index {|name, idx|
       working_array.push("#{(idx += 1).to_s}. #{name}")
+      $katz_deli = working_array
     }
     puts "The line is currently: #{working_array.join(" ")}"
   end
@@ -15,13 +16,14 @@ end
 def take_a_number(line_array, name)
   line_array.push(name.capitalize)
   puts "Welcome, #{name.capitalize}.  You are number #{line_array.count} in line."
-  katz_deli = line_array
+  $katz_deli = line_array
 end
 
 def now_serving(line_array)
   if line_array.any?
     puts "Currently serving #{line_array[0].capitalize}"
-    line_array.pop
+    line_array.shift
+    $katz_deli = line_array
   else puts "There is nobody waiting to be served!"
   end
 end
@@ -48,4 +50,5 @@ puts "Welcome to Katz Deli!  To use our new line system, just type your name and
     else take_a_number(katz_deli, input)
  end
 end
+
 =end
