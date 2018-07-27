@@ -18,13 +18,13 @@ def take_a_number(line_array, name)
 end
 
 def now_serving(line_array)
-  if line_array.any? 
+  if line_array.any?
     puts "Currently serving #{line_array[0].capitalize}"
     line_array.shift
   else puts "There is nobody waiting to be served!"
   end
 end
-=begin
+
 puts "Welcome to Katz Deli!  To use our new line system, just type your name and we will add you to the line."
 
  while TRUE
@@ -40,12 +40,10 @@ puts "Welcome to Katz Deli!  To use our new line system, just type your name and
         Other than these commands, any text will be treated as a customer name and added to the line."
     when "serve"
       now_serving(katz_deli)
-    when "exit" 
+    when "exit"
       break
     when "line"
       line(katz_deli)
     else take_a_number(katz_deli, input)
- end   
+ end
 end
-
-=end
