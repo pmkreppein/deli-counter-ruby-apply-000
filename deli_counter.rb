@@ -15,7 +15,7 @@ end
 
 def take_a_number(line_array, name)
   line_array.push(name.capitalize)
-  puts "Welcome, #{name.capitalize}.  You are number #{line_array.count} in line."
+  puts "Welcome, #{name.capitalize}. You are number #{line_array.count} in line."
   $katz_deli = line_array
 end
 
