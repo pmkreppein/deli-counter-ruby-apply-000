@@ -24,7 +24,7 @@ def now_serving(line_array)
   else puts "There is nobody waiting to be served!"
   end
 end
-
+=begin
 puts "Welcome to Katz Deli!  To use our new line system, just type your name and we will add you to the line."
 
  while TRUE
@@ -47,3 +47,5 @@ puts "Welcome to Katz Deli!  To use our new line system, just type your name and
     else take_a_number(katz_deli, input)
  end
 end
+=end
+
