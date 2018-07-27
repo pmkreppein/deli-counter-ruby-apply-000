@@ -15,6 +15,7 @@ end
 def take_a_number(line_array, name)
   line_array.push(name.capitalize)
   puts "Welcome, #{name.capitalize}.  You are number #{line_array.count} in line."
+  return katz_deli = line_array
 end
 
 def now_serving(line_array)
