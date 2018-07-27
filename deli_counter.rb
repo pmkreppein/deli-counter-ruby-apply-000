@@ -40,7 +40,7 @@ end
 puts "Welcome to Katz Deli!  To use our new line system, just type your name and we will add you to the line."
 
  while TRUE
-  print "Enter name: "
+  print "Enter name or type 'help' for more info: "
   input = gets.chomp.to_s.downcase
   case input
     when "help"
